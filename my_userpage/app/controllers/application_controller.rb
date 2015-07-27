@@ -7,4 +7,15 @@ class ApplicationController < ActionController::Base
     @userpage = Userpage.find_by_id(params['id'])
     render 'show'
   end
+  
+  def new
+  end  
+  
+  def create
+    u = Userpage.new
+    u.pageheader = params['pageheader']
+    u.url = params['url']
+    u.save
+    redirect_to "/userpage/#{ u.id }"
+  end
 end
