@@ -1,0 +1,7 @@
+<h2>Edit Userpage</h2>
+
+<form action="/update_userpage/<%= @userpage.id %>">
+  <input type="text" name="pageheader" placeholder="pageheader" value="<%= @userpage.pageheader %>">
+  <input type="text" name="url" placeholder="url" value="<%= @userpage.url %>">
+  <input type="submit">
+</form>

@@ -18,4 +18,16 @@ class ApplicationController < ActionController::Base
     u.save
     redirect_to "/userpage/#{ u.id }"
   end
+  
+  def edit
+    @userpage = Userpage.find_by_id(params['id'])
+  end
+  
+  def update
+    u = Userpage.find_by_id(params['id'])
+    u.pageheader = params['pageheader']
+    u.url = params['url']
+    u.save
+    redirect_to "/userpage/#{ u.id }"
+  end
 end

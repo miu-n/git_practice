@@ -14,7 +14,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="caption"><%= @userpage.url %></div>
+      <div class="userpage"><%= @userpage.pageheader %></div>
     </div>
   </div>
 </div>
@@ -23,8 +23,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-md-offset-2">
-        <img src="<%= @userpage.pageheader %>" alt="">
+        <img src="<%= @userpage.url %>" alt="">
       </div>
+      <a href="/userpage/<%= @userpage.id %>/edit">edit</a>
     </div>
   </div>
 </div>
