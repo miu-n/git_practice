@@ -30,4 +30,10 @@ class ApplicationController < ActionController::Base
     u.save
     redirect_to "/userpage/#{ u.id }"
   end
+  
+  def destroy
+    u = Userpage.find_by_id(params['id'])
+    u.destroy
+    
+  end
 end

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/create_userpage' => 'application#create'
   get '/userpage/:id/edit' => 'application#edit'
   get '/update_userpage/:id' => 'application#update'
+  get '/userpage/:id/destroy' => 'application#destroy'
 end
