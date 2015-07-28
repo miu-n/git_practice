@@ -23,6 +23,7 @@ h1 {
 img {
   width: 100%;
 }
-.progress{
-  width: 60%;
+
+.col-md-12{
+  text-align:center;
 }
