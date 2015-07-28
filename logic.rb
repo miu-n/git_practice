@@ -1,1 +1,1 @@
-puts 6 == "apple"
+puts 6 == "6"
