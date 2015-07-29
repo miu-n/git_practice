@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
   
   def new
-  end  
+  end
   
   def create
     u = Userpage.new
@@ -34,6 +34,10 @@ class ApplicationController < ActionController::Base
   def destroy
     u = Userpage.find_by_id(params['id'])
     u.destroy
-    
+    redirect_to "/userpage"
+  end
+  
+  def index
+    @userpage = Userpage.all
   end
 end
