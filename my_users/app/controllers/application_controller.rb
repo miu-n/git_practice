@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def show
-    @User = User.find_by_id(params['id'])
+    @user = User.find_by_id(params['id'])
     render 'show'
   end
   
@@ -12,11 +12,11 @@ class ApplicationController < ActionController::Base
   end
   
   def create
-    if params[:name] == "Albert Einstein"
-    render "user"
-    else
-      render "user2"
-    end
+    u = User.new
+    u.name = params['name']
+    u.email = params['email']
+    u.save
+    redirect_to "/users/#{ u.id }"
   end
 end
 
