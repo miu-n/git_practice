@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
-  get '/userpage/:id' => 'application#show'
-  get '/new_userpage' => 'application#new'
-  get '/create_userpage' => 'application#create'
-  get '/userpage/:id/edit' => 'application#edit'
-  get '/update_userpage/:id' => 'application#update'
-  get '/userpage/:id/destroy' => 'application#destroy'
-  get '/userpage' => 'application#index'
+  
+  # CREATE
+  get '/new_userpage' => 'userpage#new'
+  get '/create_userpage' => 'userpage#create'
+  
+  # READ
+  get '/userpage/:id' => 'userpage#show'
+  get '/userpage' => 'userpage#index'
+  
+  # UPDATE
+  get '/userpage/:id/edit' => 'userpage#edit'
+  get '/update_userpage/:id' => 'userpage#update'
+  
+  # DESTROY
+  get '/userpage/:id/destroy' => 'userpage#destroy'
+
 end
