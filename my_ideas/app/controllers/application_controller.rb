@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def show
+    @idea = Idea.find_by_id(params['id'])
   end
   
   def new

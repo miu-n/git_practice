@@ -3,7 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-md-offset-4">
-          <a href="/ideas/<%= idea.id %>"></a>
+          <%= idea.idea %>
+          <a href="/ideas/<%= idea.id %>">Show</a> |
+          <a href="/ideas/<%= idea.id %>/edit">Edit</a> |
+          <a href="/ideas/<%= idea.id %>/destroy">Destroy</a>
         </div>
       </div>
     </div>

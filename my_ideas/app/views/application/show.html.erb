@@ -7,13 +7,18 @@
   </div>
 </div>
 
+<div>
+  <strong></strong><br />
+  <p><%= @idea.idea %></p>
+</div>
+
 <div class="stripe">
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-md-offset-2">
-      </div>
       <a href="/ideas/<%= @idea.id %>/edit">edit</a>
       <a href="/ideas/<%= @idea.id %>/destroy">delete</a>
+      </div>
     </div>
   </div>
 </div>
