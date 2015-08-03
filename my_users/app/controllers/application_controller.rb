@@ -18,5 +18,16 @@ class ApplicationController < ActionController::Base
     u.save
     redirect_to "/users/#{ u.id }"
   end
+  
+  def edit
+    @user = User.find_by_id(params['id'])
+  end
+  
+    def update
+      u = User.find_by_id(params['id'])
+      u.user = params['user']
+      u.save
+      redirect_to "/users/#{ u.id }"
+  end
 end
 
