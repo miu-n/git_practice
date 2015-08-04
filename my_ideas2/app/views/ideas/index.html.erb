@@ -1,0 +1,23 @@
+<h1>Ideas</h1>
+
+<p><a href="/new_idea">Create a new idea</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idea</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ideas.each do |idea| %>
+    <tr>
+      <td><%= idea.idea %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
