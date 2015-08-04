@@ -1,16 +1,23 @@
-<h1>Idea #<%= @idea.id %></h1>
-
-<div>
-  <strong>Name</strong>:<br />
-  <p><%= @idea.name %></p>
-</div>
-<div>
-  <strong>Email</strong>:<br />
-  <p><%= @idea.email %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Ideas</h1>
+    </div>
+  </div>
 </div>
 
-<a href="/ideas/<%= @idea.id %>/edit">Edit</a> |
-<a href="/ideas/<%= @idea.id %>/destroy">Destroy</a>
-<p> </p>
-<a href="/ideas">Back to list of ideas</a> |
-<a href="/new_idea">Create a new idea</a>
+<div>
+  <strong></strong><br />
+  <p><%= @idea.idea %></p>
+</div>
+
+<div class="stripe">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2">
+      <a href="/ideas/<%= @idea.id %>/edit">edit</a>
+      <a href="/ideas/<%= @idea.id %>/destroy">delete</a>
+      </div>
+    </div>
+  </div>
+</div>

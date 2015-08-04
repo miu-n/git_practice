@@ -1,0 +1,10 @@
+<h1>Editing Bookmark #<%= @bookmark.id %></h1>
+
+<form action="/bookmarks/<%= @bookmark.id %>/update">
+    <input type="text" name="name" placeholder="name" value="<%= @bookmark.name  %>">
+    <input type="text" name="url" placeholder="url" value="<%= @bookmark.url  %>">
+    <input type="text" name="user_id" placeholder="enter a user id" value="<%= @bookmark.user_id %>">
+    <input type="submit">
+</form>
+
+

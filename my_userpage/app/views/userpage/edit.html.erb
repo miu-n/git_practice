@@ -1,7 +1,6 @@
-<h2>Edit Userpage</h2>
+<h2>Edit Idea</h2>
 
-<form action="/update_userpage/<%= @userpage.id %>">
-  <input type="text" name="pageheader" placeholder="pageheader" value="<%= @userpage.pageheader %>">
-  <input type="text" name="url" placeholder="url" value="<%= @userpage.url %>">
+<form action="/update_idea/<%= @idea.id %>">
+  <input type="text" name="idea" placeholder="idea" value="<%= @idea.idea %>">
   <input type="submit">
 </form>

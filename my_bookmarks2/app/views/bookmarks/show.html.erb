@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Bookmarks</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="stripe">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2">
+        <img src="<%= @bookmark.url %>" alt="">
+        <div class="details">
+          <div>User: <%= @user.name %></div>
+        </div>
+      <a href="/bookmarks/<%= @bookmark.id %>/edit">edit</a>
+      <a href="/bookmarks/<%= @bookmark.id %>/destroy">delete</a>
+    </div>
+  </div>
+</div>
