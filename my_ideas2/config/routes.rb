@@ -1,22 +1,5 @@
 Rails.application.routes.draw do
 
-  # Routes for the Bookmark resource:
-  # CREATE
-  get '/new_bookmark' => 'bookmarks#new'
-  get '/create_bookmark' => 'bookmarks#create'
-
-  # READ
-  get '/bookmarks' => 'bookmarks#index'
-  get '/bookmarks/:id' => 'bookmarks#show'
-
-  # UPDATE
-  get '/bookmarks/:id/edit' => 'bookmarks#edit'
-  get '/bookmarks/:id/update' => 'bookmarks#update'
-
-  # DELETE
-  get '/bookmarks/:id/destroy' => 'bookmarks#destroy'
-  #------------------------------
-
   # Routes for the User resource:
   # CREATE
   get '/new_user' => 'users#new'

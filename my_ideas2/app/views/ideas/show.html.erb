@@ -1,31 +1,11 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Ideas</a>
-    </div>
+<div class="container" id="header1">
+  <div class="row">
+    <h1 class="text"><%=@idea.text%></h1>
+    <a class="links-top" href="/idea_notebook/<%=@idea.id%>/edit">Edit</a> <span class="links">|</span>
+    <a class="links-top" href="/idea_notebook/<%=@idea.id%>/destroy">Destroy</a>
   </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>My first idea 
-          <small>
-            <a href="/ideas/<%= @idea.id %>/edit">Edit</a> |
-            <a href="/ideas/<%= @idea.id %>/destroy">Destroy</a>
-          </small></h1>
-        <div>
-          
-        </div>
-        <div>
-          <a href="/ideas/index">Back to list of ideas</a> | 
-          <a href="/new_idea">Create a new idea</a>
-        </div>
-      </div>
-    </div>
+  <div class="row" id="row2">
+    <a class="links-bottom" href="/idea_notebook/">Back to list of ideas</a> |
+    <a class="links-bottom" href="/idea_notebook/new">Create a new idea</a>
   </div>
+</div>

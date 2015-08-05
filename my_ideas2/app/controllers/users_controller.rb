@@ -38,10 +38,11 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
+
 
     redirect_to "/users"
   end

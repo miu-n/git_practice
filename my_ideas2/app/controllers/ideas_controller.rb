@@ -1,49 +1,40 @@
 class IdeasController < ApplicationController
 
-  def index
-    @ideas = Idea.all
+   def show
+    @idea = Idea.find_by(:id => params['id'])
   end
-
-  def show
-    @idea = Idea.find_by(id: params[:id])
-  end
-
+  
   def new
   end
-
+  
   def create
     @idea = Idea.new
-    @idea.ideaname = params[:ideaname]
-    @idea.ideacontent = params[:ideacontent]
-
-    if @idea.save
-      redirect_to "/ideas/#{ @idea.id }"
-    else
-      render 'new'
-    end
+    @idea.text = params['idea']
+    @idea.save
+    redirect_to "/idea_notebook/#{@idea.id}"
   end
-
+  
   def edit
-    @idea = Idea.find_by(id: params[:id])
+    @idea = Idea.find_by(id:params['id'])
   end
-
+  
   def update
-    @idea = Idea.find_by(id: params[:id])
-    @idea.ideaname = params[:ideaname]
-    @idea.ideacontent = params[:ideacontent]
-
+    @idea = Idea.find_by_id(params['id'])
+    @idea.text = params['note']
     if @idea.save
-      redirect_to "/ideas/#{ @idea.id }"
+      redirect_to "/idea_notebook/#{@idea.id}"
     else
       render 'edit'
     end
   end
-
+  
+  def index
+    @ideas = Idea.all
+  end
+  
   def destroy
-    @idea = Idea.find_by(id: params[:id])
+    @idea = Idea.find_by(id:params['id'])
     @idea.destroy
-
-
-    redirect_to "/ideas"
+    redirect_to '/idea_notebook/'
   end
 end

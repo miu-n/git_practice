@@ -1,34 +1,20 @@
-<form action="/create_idea">
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Ideas</a>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div>
-          <label for="ideaname">idea name</label><br />
-          <input id="ideaname" name="ideaname" type="text" />
-        </div>
-        <form role="form">
-          <div class="form-group">
-            <label for="ideacontent" class="control-label">Idea content</label>
-              <input type="text" class="form-control" name="ideacontent" id="ideacontent" placeholder="The wheel">
+<div class="container">
+  <div class="row">
+    <form action="/idea_notebook/create">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-6">
+            <h2 class="edit-scientist">New Idea</h2>
+            <h4>Idea</h4>
+            <div class="input-group">
+              <input id="user-input" type="text" class="form-control" name="idea" placeholder="Jot down your idea here." aria-describedby="basic-addon1">
+              <input type="submit" class="btn btn-primary">
             </div>
-            <input type="submit" class="btn btn-primary">
           </div>
-        </form>
+          <div class="col-md-2"></div>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
-  </form>
-
+</div>

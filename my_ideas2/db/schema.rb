@@ -12,23 +12,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20150805024121) do
-
-  create_table "bookmarks", force: :cascade do |t|
-    t.string   "name"
-    t.string   "url_link"
-    t.string   "description"
-    t.string   "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "user"
-    t.string   "Username"
-  end
-
+  
   create_table "ideas", force: :cascade do |t|
-    t.string   "ideaname"
-    t.string   "ideacontent"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
