@@ -1,8 +1,36 @@
-<h2>Edit Idea</h2>
+<form action="/ideas/<%= @idea.id %>/update">
 
-<form action="/update_idea/<%= @idea.id %>">
-  <input type="text" name="idea" placeholder="idea" value="<%= @idea.idea %>">
-  <input type="submit">
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ideas</a>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div>
+          <label for="ideaname">idea name</label><br />
+          <input id="ideaname" name="ideaname" type="text" value="<%= @idea.ideaname  %>"/>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <label for="ideacontent" class="control-label">Idea content</label>
+              <input type="text" class="form-control" name="ideacontent" id="ideacontent" placeholder="The wheel" value="<%= @idea.ideacontent  %>">
+            </div>
+            <input type="submit" class="btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
 </form>
-
-

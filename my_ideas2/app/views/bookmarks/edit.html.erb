@@ -1,0 +1,24 @@
+<h1>Editing Bookmark #<%= @bookmark.id %></h1>
+
+<form action="/bookmarks/<%= @bookmark.id %>/update">
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @bookmark.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="url_link">url link</label><br />
+    <input id="url_link" name="url_link" value="<%= @bookmark.url_link  %>" type="text" />
+  </div>
+  <div>
+    <label for="description">description</label><br />
+    <input id="description" name="description" value="<%= @bookmark.description  %>" type="text" />
+  </div>
+  <div>
+    <label for="description">user id</label><br />
+    <input id="user_id" name="user_id" type="text" value="<%= @bookmark.user_id  %>">
+  </div>
+
+  <div>
+    <input type="submit">
+  </div>
+</form>

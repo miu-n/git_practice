@@ -1,0 +1,23 @@
+<h1>New Bookmark</h1>
+
+<form action="/create_bookmark">
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" type="text" />
+  </div>
+  <div>
+    <label for="url_link">url link</label><br />
+    <input id="url_link" name="url_link" type="text">
+  </div>
+  <div>
+    <label for="description">description</label><br />
+    <input id="description" name="description" type="text" />
+  </div>
+  <div>
+    <label for="description">user id</label><br />
+    <input id="<%= @user %>" name="<%= @user %>" type="text">
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
