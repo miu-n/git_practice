@@ -1,22 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Bookmarks</h1>
-    </div>
-  </div>
+<h1>Bookmark #<%= @bookmark.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @bookmark.name %></p>
+</div>
+<div>
+  <strong>Url</strong>:<br />
+  <p><%= @bookmark.url %></p>
+</div>
+<div>
+  <strong>Description</strong>:<br />
+  <p><%= @bookmark.description %></p>
+</div>
+<div>
+  <strong>User</strong>:<br />
+  <p><%= User.find_by_id(@bookmark.user_id).name %></p>
 </div>
 
-
-<div class="stripe">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-md-offset-2">
-        <img src="<%= @bookmark.url %>" alt="">
-        <div class="details">
-          <div>User: <%= @user.name %></div>
-        </div>
-      <a href="/bookmarks/<%= @bookmark.id %>/edit">edit</a>
-      <a href="/bookmarks/<%= @bookmark.id %>/destroy">delete</a>
-    </div>
-  </div>
-</div>
+<a href="/bookmarks/<%= @bookmark.id %>/edit">Edit</a> |
+<a href="/bookmarks/<%= @bookmark.id %>/destroy">Destroy</a>

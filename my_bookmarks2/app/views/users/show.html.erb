@@ -8,6 +8,16 @@
   <strong>Email</strong>:<br />
   <p><%= @user.email %></p>
 </div>
+<div class = "list-group">
+<% @bookmarks.each do |mark| %>
+    <tr>
+      <div class = "list-group-item">
+        <td><%= mark.name %></td>
+      </div>
+
+    </tr>
+<% end %>
+</div>
 
 <a href="/users/<%= @user.id %>/edit">Edit</a> |
 <a href="/users/<%= @user.id %>/destroy">Destroy</a>

@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    @bookmarks = Bookmark.find_by(user_id: @user.id)
   end
 
   def new

@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 20150804151943) do
   create_table "bookmarks", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
+    t.string   "description"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
