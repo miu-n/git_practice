@@ -1,0 +1,24 @@
+<h1>Artist #<%= @artist.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @artist.name %></p>
+</div>
+
+<%Song.where(artist_id:@artist.id).each do |mark| %>
+    <tr>
+      <div class = "list-group-item">
+        <td><%= mark.name %></td>
+      </div>
+
+    </tr>
+<% end %>
+
+<div>
+  <strong>Image url</strong>:<br/>
+
+  <p><%= @artist.image_url %></p>
+</div>
+
+<a href="/artists/<%= @artist.id %>/edit">Edit</a> |
+<a href="/artists/<%= @artist.id %>/destroy">Destroy</a>

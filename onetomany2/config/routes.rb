@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  # CREATE
+  
+# CREATE
   get '/new_song' => 'songs#new'
   get '/create_song' => 'songs#create'
 
@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
   # DELETE
   get '/songs/:id/destroy' => 'songs#destroy'
+  #------------------------------
 
+  # Routes for the Artist resource:
   # CREATE
   get '/new_artist' => 'artists#new'
   get '/create_artist' => 'artists#create'
@@ -29,5 +31,5 @@ Rails.application.routes.draw do
 
   # DELETE
   get '/artists/:id/destroy' => 'artists#destroy'
- 
+  #------------------------------
 end

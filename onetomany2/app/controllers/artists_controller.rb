@@ -14,7 +14,7 @@ class ArtistsController < ApplicationController
   def create
     @artist = Artist.new
     @artist.name = params[:name]
-    @artist.url = params[:url]
+    @artist.image_url = params[:image_url]
 
     if @artist.save
       redirect_to "/artists/#{ @artist.id }"
@@ -30,7 +30,7 @@ class ArtistsController < ApplicationController
   def update
     @artist = Artist.find_by(id: params[:id])
     @artist.name = params[:name]
-    @artist.url = params[:url]
+    @artist.image_url = params[:image_url]
 
     if @artist.save
       redirect_to "/artists/#{ @artist.id }"

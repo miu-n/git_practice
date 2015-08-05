@@ -6,7 +6,7 @@
 </div>
 <div>
   <strong>Artist</strong>:<br />
-  <p><%= @song.artist_id %></p>
+  <p><%= Artist.find_by_id(@song.artist_id).name %></p>
 </div>
 
 <a href="/songs/<%= @song.id %>/edit">Edit</a> |

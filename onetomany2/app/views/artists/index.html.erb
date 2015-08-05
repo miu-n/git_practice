@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Image Url</th>
+      <th>Image url</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,7 +17,7 @@
   <% @artists.each do |artist| %>
     <tr>
           <td><%= artist.name %></td>
-          <td><%= artist.url %></td>
+          <td><%= artist.image_url %></td>
           <td><a href="/artists/<%= artist.id %>">Show</a>
         </td>
       <td><a href="/artists/<%= artist.id %>/edit">Edit</a></td>
@@ -26,4 +26,3 @@
   <% end %>
   </tbody>
 </table>
-
